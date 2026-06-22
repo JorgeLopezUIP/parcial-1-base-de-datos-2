@@ -4,3 +4,9 @@ La tabla pago se conecta con usuarios mediante la llave foránea id_usuario, lo 
 Por otro lado, la tabla autentificacion también depende de usuarios a través de id_usuario, pero con la restricción UNIQUE, lo que indica que cada usuario solo puede tener un único registro de autenticación. Esto representa una relación uno a uno (1:1).
 La tabla pruebas está relacionada con usuarios mediante id_usuarios, lo que permite asociar diferentes pruebas realizadas por cada usuario, manteniendo nuevamente una relación 1:N.
 Finalmente, la tabla reporte actúa como una tabla de relación más compleja, ya que se conecta tanto con pruebas (mediante id_prueba) como con usuarios (mediante id_usuario). Esto permite registrar reportes específicos de cada prueba realizada por un usuario, funcionando como una estructura de seguimiento entre ambas entidades
+
+Lecciones aprendidas: 
+Relacionar mejor la base de datos
+Reforce como crear una base de datos con llaves foraneas 
+Aprendi la importancia de restricciones como NOT NULL Y UNIQUE 
+Aprendi a usar ENUM
