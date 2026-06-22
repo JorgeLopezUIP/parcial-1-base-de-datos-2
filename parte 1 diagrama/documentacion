@@ -1,0 +1,10 @@
+El diagrama se creo en la plataforma DrawSQL 
+Cuenta con cuatro campos: usuario,servicios,servicios contratados,autentificacion,auditoria y pago
+No esta normalizado todavia
+La idea es que la base gira en torno al usuariom que conecta con los otros campos mediante su id unica
+Exepto por servicio contratado que conecta con usuario y servicio ambos. 
+
+Lecciones aprendidas: 
+Aprendi lo importante que es crear un diagrama de flujo antes de hacer una base de datos
+El diagrama ayuda a tener una nota mental y una guia a la hora de poner manos a la obra
+Aprendi a como utilizar llaves foraneas correctamente
