@@ -1,0 +1,5 @@
+Se aplico la normalizacion del tipo 3 al primer diagramam 
+La tabla auditoria ahora solo depende de indentificacion 
+La tabla pago solo depende de servicios contratados 
+La tabla servicios es independiente 
+La tabla servicios contratados depende de ambas usuarios y servicios
