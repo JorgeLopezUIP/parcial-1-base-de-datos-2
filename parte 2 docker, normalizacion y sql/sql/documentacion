@@ -1,5 +1,7 @@
-Se aplico la normalizacion del tipo 3 al primer diagramam 
-La tabla auditoria ahora solo depende de indentificacion 
-La tabla pago solo depende de servicios contratados 
-La tabla servicios es independiente 
-La tabla servicios contratados depende de ambas usuarios y servicios
+Se crea la base SQL en base a la tabla normalizada
+La tabla principal es usuarios, ya que de aquí se derivan la mayoría de las relaciones. Cada usuario tiene información básica como nombre, correo, teléfono, rol y estado activo.
+A partir de esta tabla se conecta autentificacion, donde se almacenan las credenciales de acceso. Esta tabla tiene una llave foránea id_usuario que hace referencia a usuarios(id), lo que significa que cada registro de autenticación pertenece a un usuario específico.
+En el caso de los servicios, existe la tabla servicios, que funciona como catálogo general. Los usuarios pueden contratar estos servicios a través de la tabla intermedia servicios_contratados, la cual contiene dos llaves foráneas: id_usuario y id_servicio. 
+Estas referencias permiten relacionar qué usuario contrató qué servicio, formando una relación muchos a muchos entre usuarios y servicios.
+La tabla pago está relacionada con servicios_contratados mediante la llave foránea id_contrato. Esto indica que cada pago pertenece a un servicio previamente contratado, manteniendo el control de las transacciones realizadas.
+Finalmente, la tabla auditoria se relaciona con autentificacion mediante id_autenticacion. Esta relación permite registrar los eventos de acceso (login y logout) asociados a cada usuario autenticado, lo que ayuda a llevar un control de seguridad del sistema
