@@ -1,0 +1,7 @@
+Normalización de la Base de Datos (5 pts)
+● Aplicar normalización hasta Tercera Forma Normal (3FN).
+● Explicar con sus propias palabras:
+○ Qué problemas se resolvieron en cada etapa
+R: Hace que la tabla servicios contratados deje de depender de la tabla de usuarios, por lo que si esta última sirve algún cambio no afectara a toda la tabla, sino solo a las que dependan de esta.
+○ Por qué el diseño final es óptimo
+R: Reduce la dependencia de la base de datos en una sola tabla. Lo que la hace más segura y robusta, hace que asignar nuevos datos sea menos tedioso. 
