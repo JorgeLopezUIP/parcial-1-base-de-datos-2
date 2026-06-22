@@ -56,7 +56,6 @@ CREATE TABLE reporte(
 
 describe autentificacion;
 
-alter table autentificacion drop column agente_usuario;
 
 INSERT INTO usuarios(nombre,apellido,nombre_usuario,contrasena,ciudad,direccion,sexo,estado_civil,token,tipo_empresa,rol)
 VALUES
