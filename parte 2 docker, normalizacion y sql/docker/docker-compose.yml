@@ -1,0 +1,17 @@
+services: #Se declaran los servicios que se van a usar
+    mariadb: #Nombre del servicio
+        image: mariadb #Imagen de MariaDB que descargara Docker
+        container_name: parcial-1 #Nombre del contenedor con el que docker lo indentificara
+        restart: unless-stopped #Se reinicia el contenedor si se vuelve a encender el docker, exepto si se apago manualmente
+        environment: #Variables requerida para crar una base de datos en MariaDB
+            MARIADB_ROOT_PASSWORD: root123 #Contraseña del usuario root que se usa para entrar a la base de datos en docker en la terminal
+            MARIADB_DATABASE: maria_db #Nombre de la base de datos que se va a crear cuando se ejecute el codigo, si no se pone esta variable tambien se puede crear dentro de la base de datos
+            MARIADB_USER: jorge #usuario particular de esta base de datos
+            MARIADB_PASSWORD: pass123 #contraseña del usuario particular
+        ports:
+            - "3307:3306" #Puerto que usa la PC y el Docker en ese orden. 
+        volumes: 
+            - mariadb_data:/var/lib/parcial1 #MariaDB guardara los datos aqui para que no se pierdan si se borra el contenedor
+
+volumes: 
+    mariadb_data: #Declaracion del volumen
